@@ -1,5 +1,2 @@
-"Store users favorite color"
- 
- def fav_color:
-    input("what is your favorite color")
-    print("Color has been saved")
+"""First comment"""
+#Second comment
