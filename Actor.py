@@ -63,7 +63,60 @@ class Actor:
     
 class Trivia:
     
+    def __innit__(self,question,answer,response):
+        """Initialize question and answer and response parameters
+
+        Args:
+            question (str): trivia question that is being asked
+            answer (str): answer to trivia question
+            response(str): users response to trivia question
+        """
+    
     def parse_args(arglist):
         """Parse command line arguments
         
+        """
+    
+    def ask_question(self,question):
+        """ask user a question based on movie/actor
+
+        Args:
+            question (str): question based on movie/actor
+            
+        Return: (str):question that user must answer
+
+        """
+    def user_response(self, response):
+        """store users response to question
+
+        Args:
+            response (str): user response to trivia question
+            
+        Returns: user response to trivia question
+        """
+    
+    def validate_response(self, response, answer):
+        """validate that users response to question is correct
+
+        Args:
+            response (str): user response
+            answer (str): answer to question
+        Returns:
+            Bool - True or False
+        """
+    def win(self,strikes):
+        """return statment that user has won the game if they get less than 3 wrong
+        Args:
+            strike (int): the amont of times user has entered a wrong answer
+        Returns:
+            Print statement telling user they won the game
+        """
+    
+    def lose(self,strikes):
+        """return statment that user has lost the game if they get more than 3 wrong
+        Args:
+            strike (int): the amont of times user has entered a wrong answer
+            
+        Returns:
+            Print statement telling user they lost the game
         """
