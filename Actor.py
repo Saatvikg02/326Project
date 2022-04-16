@@ -16,7 +16,6 @@ class Actor:
    Returns:
        str- genre of movie
     """
-        pass
 
     def release_date(self,movie_name):
         """return the release date of the movie based on the move name from csv file
@@ -25,7 +24,6 @@ class Actor:
    Returns:
        int- release date
     """
-        pass
     
     def get_movie(self,movie_name):
         """return the name of the movie from the csv file
@@ -43,7 +41,6 @@ class Actor:
     Returns:
         int - profits
     """
-        pass
     
     def get_awards(self,awards):
         """returns a list of awards the particular movie or actor
@@ -52,7 +49,6 @@ class Actor:
     Returns:
         list - list of strings of all the awards
     """
-        pass
     
     def recommendations(self, actor_name, genre,awards,movie_name):
         """returns a list of recommendations based on the """
@@ -71,12 +67,6 @@ class Trivia:
             answer (str): answer to trivia question
             response(str): users response to trivia question
         """
-    
-    def parse_args(arglist):
-        """Parse command line arguments
-        
-        """
-    
     def ask_question(self,question):
         """ask user a question based on movie/actor
 
@@ -120,3 +110,19 @@ class Trivia:
         Returns:
             Print statement telling user they lost the game
         """
+    
+    def parse_args(arglist):
+        """Parse command line arguments
+        
+    Args:
+        arglist (list of strings): arguments in the command line
+    Returns:
+        the list of strings in the terminal
+    Side effects:
+        prints objects to the terminal
+     """
+        pass
+    
+    if __name__ == "__main__":
+        pass
+    
