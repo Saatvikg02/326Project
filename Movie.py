@@ -40,10 +40,6 @@ class Movie:
             genre (str): the genre of the movie
             actor_name (str): name of lead actor in movie
         """
-        df = file.query(f"Title == '{title}'")
-        #df = file[file.Title.isin([f"{title}"])]
-        #df = file[file.Title.str.contains(f"{title}")]
-        #df = file.filter([f"{title}"])
         
         for line in file:
             release_year = file.loc[file.Title == title, 'Release Year'].tolist()
@@ -76,34 +72,35 @@ class Recomendation:
         Returns:
             string of recomended movies 
         """
-        if self.user_choice == "Superhero":
-            genre_filter = df["Genre"] == "Superhero"
-            superhero_df = df[genre_filter]
-            cols = ["Title, Genre"]
+        if user_choice == "Superhero":
+            genre_filter = file["Genre"] == "Superhero"
+            superhero_df = file[genre_filter]
+            cols = ["Title","Genre"]
             final = superhero_df[cols]
-        
+            
+
         elif self.user_choice == "Action/Adventure":
-            genre_filter = df["Genre"] == "Action/Adventure"
-            action_df = df[genre_filter]
-            cols = ["Title, Genre"]
+            genre_filter = file["Genre"] == "Action/Adventure"
+            action_df = file[genre_filter]
+            cols = ["Title", "Genre"]
             final = action_df[cols]
         
         elif self.user_choice == "Romance/Drama":
-            genre_filter = df["Genre"] == "Romance/Drama"
-            romance_df = df[genre_filter]
-            cols = ["Title, Genre"]
+            genre_filter = file["Genre"] == "Romance/Drama"
+            romance_df = file[genre_filter]
+            cols = ["Title", "Genre"]
             final = romance_df[cols]
         
         elif self.user_choice == "Family/Adventure":
-            genre_filter = df["Genre"] == "Family/Adventure"
-            family_df = df[genre_filter]
-            cols = ["Title, Genre"]
+            genre_filter = file["Genre"] == "Family/Adventure"
+            family_df = file[genre_filter]
+            cols = ["Title", "Genre"]
             final = family_df[cols]
         
         elif self.user_choice == "Animation":
-            genre_filter = df["Genre"] == "Animation"
-            animation_df = df[genre_filter]
-            cols = ["Title, Genre"]
+            genre_filter = file["Genre"] == "Animation"
+            animation_df = file[genre_filter]
+            cols = ["Title", "Genre"]
             final = animation_df[cols]
             
         print(final)
