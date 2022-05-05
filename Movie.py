@@ -1,6 +1,6 @@
 import pandas as pd
 
-file = pd.read_csv("/Users/edwardjames/Downloads/326 Final Project - movie_data.csv")
+file = pd.read_csv("movie_data.csv")
 
 class Movie:
     
