@@ -1,6 +1,6 @@
 import pandas as pd
 
-file = pd.read_csv("/Users/edwardjames/Downloads/326 Final Project - Sheet1.csv")
+file = pd.read_csv("movie_data.csv")
 
 class Movie:
     
@@ -61,7 +61,7 @@ class Recomendation:
     def user_choice(self):
         """Store input of users favorite genre of movie
         """
-        fav_genre = input("Enter your favorite movie genre:")
+        fav_genre = input("Enter your favorite movie genre: ")
         
     def recommend_movie(self, genre):
         """recomend movie to user based on movie genre
@@ -72,7 +72,7 @@ class Recomendation:
         Returns:
             string of recomended movies 
         """
-        if user_choice == "Superhero":
+        if self.user_choice == "Superhero":
             genre_filter = file["Genre"] == "Superhero"
             superhero_df = file[genre_filter]
             cols = ["Title","Genre"]
