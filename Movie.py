@@ -64,7 +64,7 @@ class Recomendation:
     def user_choice(self):
         """Store input of users favorite genre of movie
         """
-        fav_genre = input("Enter your favorite movie genre:")
+        fav_genre = input("Enter your favorite movie genre: ")
         
     def recommend_movie(self, genre):
         """recomend movie to user based on movie genre
@@ -75,6 +75,10 @@ class Recomendation:
         Returns:
             string of reccomended movies 
         """
+        genre_filter = df["Genre"] == "Superhero"
+        superhero_df = df[genre_filter]
+        cols = ["Title, Genre"]
+        final = superhero_df[cols]
     
 def parse_args(arglist):
     """Parse command line arguments
