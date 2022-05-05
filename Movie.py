@@ -87,6 +87,26 @@ class Recomendation:
             action_df = df[genre_filter]
             cols = ["Title, Genre"]
             final = action_df[cols]
+        
+        elif self.user_choice == "Romance/Drama":
+            genre_filter = df["Genre"] == "Romance/Drama"
+            romance_df = df[genre_filter]
+            cols = ["Title, Genre"]
+            final = romance_df[cols]
+        
+        elif self.user_choice == "Family/Adventure":
+            genre_filter = df["Genre"] == "Family/Adventure"
+            family_df = df[genre_filter]
+            cols = ["Title, Genre"]
+            final = family_df[cols]
+        
+        elif self.user_choice == "Animation":
+            genre_filter = df["Genre"] == "Animation"
+            animation_df = df[genre_filter]
+            cols = ["Title, Genre"]
+            final = animation_df[cols]
+            
+        print(final)
             
     
 def parse_args(arglist):
