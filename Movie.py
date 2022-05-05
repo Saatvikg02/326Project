@@ -43,7 +43,7 @@ class Movie:
         df = file.query(f"Title == {title}")
         #df = file[file.Title.isin([f"{title}"])]
         #df = file[file.Title.str.contains(f"{title}")]
-        df = file.filter([f"{title}"])
+        #df = file.filter([f"{title}"])
         
         for line in df:
             release_year = file.loc[(f"{title}"),"Release Year"]
@@ -59,11 +59,12 @@ class Recomendation:
         Args:
             genre (str): genre of movies
         """
-    
+        self.genre = genre
     
     def user_choice(self):
         """Store input of users favorite genre of movie
         """
+        fav_genre = input("Enter your favorite movie genre:")
         
     def recommend_movie(self, genre):
         """recomend movie to user based on movie genre
@@ -75,18 +76,18 @@ class Recomendation:
             string of reccomended movies 
         """
     
-    def parse_args(arglist):
-        """Parse command line arguments
+def parse_args(arglist):
+    """Parse command line arguments
         
-    Args:
-        arglist (list of strings): arguments in the command line
-    Returns:
-        the list of strings in the terminal
-    Side effects:
-        prints objects to the terminal
-     """
-        pass
+Args:
+    arglist (list of strings): arguments in the command line
+Returns:
+    the list of strings in the terminal
+Side effects:
+    prints objects to the terminal
+    """
+    pass
     
-    if __name__ == "__main__":
-        pass
+if __name__ == "__main__":
+    pass
     
