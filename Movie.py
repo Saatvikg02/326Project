@@ -104,6 +104,7 @@ class Recomendation:
             final = animation_df[cols]
             
         print(final)
+
 def parse_args(arglist):
     """Parse command line arguments
         
