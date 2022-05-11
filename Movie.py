@@ -48,6 +48,7 @@ class Movie:
             print(f"The {genre} film {title} was released in {release_year} with lead actor{actor}")
             break
         
+              
 class Recomendation:
     
     def __init__(self,genre):
@@ -104,6 +105,17 @@ class Recomendation:
             final = animation_df[cols]
             
         print(final)
+        
+    def actor(self, actor):
+        more_info = input("Would you like to learn more about any of these movies? (y/n): ")
+        if more_info.lower == "n" or "no":
+            return
+
+        if more_info.lower == "y" or "yes":
+            more_info_movie = input("Movie name: ")
+            print(f"The lead actor for this movie is ")
+            
+        
 
 def parse_args(arglist):
     """Parse command line arguments
