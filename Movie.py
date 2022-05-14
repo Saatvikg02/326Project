@@ -112,8 +112,10 @@ class Recomendation:
             return
 
         if more_info.lower == "y" or "yes":
-            more_info_movie = input("Movie name: ")
+            movie_info = input("Movie name: ")
             print(f"The lead actor for this movie is ")
+            
+        
             
         
 
