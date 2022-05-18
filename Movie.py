@@ -1,4 +1,7 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 file = pd.read_csv("movie_data.csv")
 
@@ -118,7 +121,7 @@ def actor(self, actor):
 def box_office(self):
     df = pd.read_csv("movie_data.csv")
     print(df['Title', 'Box Office'])
-    
+    print(sns.lmplot(x = 'Genre', y = 'Box Office', data = df))   
             
         
             
