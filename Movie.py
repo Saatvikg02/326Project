@@ -1,6 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from argparse import ArgumentParser
+import sys
+
+
 
 
 file = pd.read_csv("movie_data.csv")
@@ -137,8 +141,15 @@ Returns:
 Side effects:
     prints objects to the terminal
     """
-    pass
+    
+    parser = ArgumentParser()
+    parser.add_argument("file")
+    return parser.parse_args(arglist)
+
     
 if __name__ == "__main__":
-    pass
+    args = parse_args(sys.argv[1:])
+    Recomendation(args.file)
+
+
     
