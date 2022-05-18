@@ -106,7 +106,7 @@ class Recomendation:
             
         print(final)
         
-    def actor(self, actor):
+def actor(self, actor):
         more_info = input("Would you like to learn more about any of these movies? (y/n): ")
         if more_info.lower == "n" or "no":
             return
@@ -114,6 +114,11 @@ class Recomendation:
         if more_info.lower == "y" or "yes":
             movie_info = input("Movie name: ")
             print(f"The lead actor for this movie is {movie_info.actor}")
+
+def box_office(self):
+    df = pd.read_csv("movie_data.csv")
+    print(df['Title', 'Box Office'])
+    
             
         
             
