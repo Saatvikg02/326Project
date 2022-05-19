@@ -4,7 +4,7 @@ Final project for INST 326
 
 The objective is to create a interactive terminal based movie information data set. 
 =======
-Names: Ethan Weber, Edward James, Saatvik Gangavarapu
+Names: Ethan Weber, Edward James, Saatvik Gangavarapu, Anwar Hassen, Mazen Hamza
 The objective is to create a interactive terminal based movie information data set. 
 >>>>>>> a3dd7344fe5611a0715ab44479141fdc8615fda9
 
@@ -30,3 +30,4 @@ Attributions:
 Saatvik: recommend_movie, __init__
 Edward: get_info, __init__, movie_list
 Ethan: actor, box_office
+Anwar: get_actor_info, box_office_rec
