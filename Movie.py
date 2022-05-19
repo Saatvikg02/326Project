@@ -54,6 +54,20 @@ class Movie:
             actor = file.loc[file.Title == title, 'Lead Actor'].tolist()
             print(f"The {genre} film {title} was released in {release_year} with lead actor{actor}")
             break
+            
+    def get_actor_info(self, actor_name):
+        """ get info of a given actor including thier movies release date, genre, and movie names
+
+        Args:
+            actor_name (str): the name of the actor 
+        
+        Returns:
+            release_year (int): year the movie was released
+            genre (str): the genre of the movie
+            title (str): name of the movie
+        """
+        out_df = file.loc(file['Lead Actor'] == actor_name)
+        print( '\nThe follwing information is related to {actor_name} \n', out_df) 
         
               
 class Recomendation:
@@ -127,6 +141,38 @@ def box_office(self):
     print(df['Title', 'Box Office'])
     print(sns.lmplot(x = 'Genre', y = 'Box Office', data = df))   
             
+def box_office_rec(self, box_o):
+    boxi = input("Select the box office range for movies you are intrested in: (3bil - 2.5bil, 2.5bil - 2bil, 2bil - 1.5bil, 1.5bill- 1bill, 1bill- below) ")
+    if boxi == "3bil - 2.5bil":
+        top_filter = file["Box Office"] >= 2,500,000,000
+        topdf = file[top_filter]
+        cols = ["Title", "Box Office", "Genre", "Lead Actor", "Release Year" ]
+        out = topdf[cols]
+        
+    elif boxi == "2.5bil - 2bil":
+        mid1_filter = file["Box Office"] == (2,500,000,000 >= 2,000,000,000)
+        middf1 = file[mid1_filter]
+        cols = ["Title", "Box Office", "Genre", "Lead Actor", "Release Year" ]
+        out = middf1[cols]
+    
+    elif boxi == "2bil - 1.5bil":
+        mid2_filter = file["Box Office"] == (2,000,000,000 >= 1,500,000,000)
+        middf2 = file[mid2_filter]
+        cols = ["Title", "Box Office", "Genre", "Lead Actor", "Release Year" ]
+        out = middf2[cols]
+        
+    elif boxi == "1.5bil - 1bil":
+        mid1_filter = file["Box Office"] == (2,500,000,000 >= 2,000,000,000)
+        middf1 = file[mid1_filter]
+        cols = ["Title", "Box Office", "Genre", "Lead Actor", "Release Year" ]
+        out = middf1[cols]
+        
+    elif boxi == "1bil - below":
+        end_filter = file["Box Office"] <= (1,000,000,000)
+        enddf = file[end_filter]
+        cols = ["Title", "Box Office", "Genre", "Lead Actor", "Release Year" ]
+        out = middf1[cols]
+
         
             
         
